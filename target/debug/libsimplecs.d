@@ -1,0 +1,1 @@
+C:\Users\anafl\Projects\simplecs\target\debug\libsimplecs.rlib: C:\Users\anafl\Projects\simplecs\src\builder.rs C:\Users\anafl\Projects\simplecs\src\components.rs C:\Users\anafl\Projects\simplecs\src\lib.rs C:\Users\anafl\Projects\simplecs\src\query.rs C:\Users\anafl\Projects\simplecs\src\storage.rs
