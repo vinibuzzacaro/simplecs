@@ -1,1 +1,81 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `simplecs` crate."><title>simplecs - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-6c3ea77c.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="simplecs" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0 (05f9846f8 2025-03-31)" data-channel="1.86.0" data-search-js="search-581efc7a.js" data-settings-js="settings-6dad6058.js" ><script src="../static.files/storage-3a5871a4.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-4d63596a.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../simplecs/index.html">simplecs</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#macros">Crate Items</a></h3><ul class="block"><li><a href="#macros" title="Macros">Macros</a></li><li><a href="#structs" title="Structs">Structs</a></li><li><a href="#traits" title="Traits">Traits</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>simplecs</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/simplecs/lib.rs.html#1-9">Source</a> </span></div><h2 id="macros" class="section-header">Macros<a href="#macros" class="anchor">§</a></h2><dl class="item-table"><dt><a class="macro" href="macro.component_list.html" title="macro simplecs::component_list">component_<wbr>list</a></dt></dl><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><dl class="item-table"><dt><a class="struct" href="struct.ComponentStorage.html" title="struct simplecs::ComponentStorage">Component<wbr>Storage</a></dt><dt><a class="struct" href="struct.ComponentStorageBuilder.html" title="struct simplecs::ComponentStorageBuilder">Component<wbr>Storage<wbr>Builder</a></dt><dt><a class="struct" href="struct.Storage.html" title="struct simplecs::Storage">Storage</a></dt><dt><a class="struct" href="struct.With.html" title="struct simplecs::With">With</a></dt><dt><a class="struct" href="struct.Without.html" title="struct simplecs::Without">Without</a></dt></dl><h2 id="traits" class="section-header">Traits<a href="#traits" class="anchor">§</a></h2><dl class="item-table"><dt><a class="trait" href="trait.Component.html" title="trait simplecs::Component">Component</a></dt><dt><a class="trait" href="trait.ComponentBucket.html" title="trait simplecs::ComponentBucket">Component<wbr>Bucket</a></dt><dt><a class="trait" href="trait.ComponentList.html" title="trait simplecs::ComponentList">Component<wbr>List</a></dt><dt><a class="trait" href="trait.Query.html" title="trait simplecs::Query">Query</a></dt></dl></section></div></main></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="simplecs"><title>simplecs - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-6c3ea77c.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="simplecs" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0 (05f9846f8 2025-03-31)" data-channel="1.86.0" data-search-js="search-581efc7a.js" data-settings-js="settings-6dad6058.js" ><script src="../static.files/storage-3a5871a4.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-4d63596a.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle" title="show sidebar"></button></nav><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../simplecs/index.html">simplecs</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#simplecs" title="simplecs">simplecs</a><ul><li><a href="#-features" title="✨ Features">✨ Features</a></li><li><a href="#-example" title="🚀 Example">🚀 Example</a></li><li><a href="#-query-api" title="📐 Query API">📐 Query API</a></li><li><a href="#-architecture" title="🧱 Architecture">🧱 Architecture</a></li><li><a href="#-license" title="🛠 License">🛠 License</a></li><li><a href="#-created-by-buzzac" title="🦀 Created by Buzzac">🦀 Created by Buzzac</a></li></ul></li></ul><h3><a href="#macros">Crate Items</a></h3><ul class="block"><li><a href="#macros" title="Macros">Macros</a></li><li><a href="#structs" title="Structs">Structs</a></li><li><a href="#traits" title="Traits">Traits</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer"></div><main><div class="width-limiter"><rustdoc-search></rustdoc-search><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>simplecs</span><button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/simplecs/lib.rs.html#1-118">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="simplecs"><a class="doc-anchor" href="#simplecs">§</a>simplecs</h2>
+<p><a href="https://crates.io/crates/simplecs"><img src="https://img.shields.io/crates/v/simplecs.svg" alt="Crates.io" /></a>
+<a href="https://docs.rs/simplecs"><img src="https://docs.rs/simplecs/badge.svg" alt="Documentation" /></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/crates/l/simplecs" alt="License: MIT OR Apache-2.0" /></a></p>
+<p><strong><code>simplecs</code></strong> is a lightweight, zero-dependency Entity-Component System (ECS) for Rust.<br />
+It emphasizes <strong>simplicity</strong>, <strong>type-safety</strong>, and <strong>ergonomic querying</strong>.</p>
+<hr />
+<h3 id="-features"><a class="doc-anchor" href="#-features">§</a>✨ Features</h3>
+<ul>
+<li>✅ Simple API — no macro-heavy boilerplate</li>
+<li>🧠 Type-based querying with <code>With&lt;T&gt;</code> / <code>Without&lt;T&gt;</code></li>
+<li>🧩 Dynamic component registration via <code>ComponentStorageBuilder</code></li>
+<li>🔄 Uses <code>TypeId</code> + <code>Any</code> internally for type-erased buckets</li>
+<li>🦀 Pure safe Rust — great for learning ECS</li>
+</ul>
+<hr />
+<h3 id="-example"><a class="doc-anchor" href="#-example">§</a>🚀 Example</h3>
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">use </span>simplecs::<span class="kw-2">*</span>;
+W
+<span class="kw">struct </span>Position(f32, f32);
+<span class="kw">impl </span>Component <span class="kw">for </span>Position {}
+
+<span class="kw">struct </span>Velocity(f32, f32);
+<span class="kw">impl </span>Component <span class="kw">for </span>Velocity {}
+
+<span class="comment">// For now, you should manually inform 
+// how many combinations you can use in
+// your queries
+</span><span class="macro">component_list!</span>(A, B, C, D, E);
+
+<span class="kw">fn </span>main() {
+    <span class="kw">let </span><span class="kw-2">mut </span>storage = ComponentStorageBuilder::&lt;u32&gt;::new()
+        .with::&lt;Position&gt;()
+        .with::&lt;Velocity&gt;()
+        .build();
+
+    storage.add_component(<span class="number">1</span>, Position(<span class="number">1.0</span>, <span class="number">2.0</span>));
+    storage.add_component(<span class="number">1</span>, Velocity(<span class="number">0.1</span>, <span class="number">0.1</span>));
+    storage.add_component(<span class="number">2</span>, Position(<span class="number">5.0</span>, <span class="number">5.0</span>));
+
+    <span class="kw">let </span>moving = storage.query::&lt;With&lt;(Position, Velocity)&gt;&gt;();
+    <span class="macro">assert_eq!</span>(moving, <span class="macro">vec!</span>[<span class="number">1</span>]);
+
+    <span class="kw">let </span>static_entities = storage.query::&lt;(With&lt;Position&gt;, Without&lt;Velocity&gt;)&gt;();
+    <span class="macro">assert_eq!</span>(static_entities, <span class="macro">vec!</span>[<span class="number">2</span>]);
+}</code></pre></div>
+<hr />
+<h3 id="-query-api"><a class="doc-anchor" href="#-query-api">§</a>📐 Query API</h3>
+<p><code>simplecs</code> uses type-safe static dispatch to query entities:</p>
+<ul>
+<li><code>With&lt;T&gt;</code> – selects entities with components <code>T</code></li>
+<li><code>Without&lt;T&gt;</code> – selects entities that lack <code>T</code></li>
+<li>Combinations like <code>(With&lt;A&gt;, Without&lt;B&gt;)</code> work too</li>
+</ul>
+<p>Define component groups with a macro:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="macro">component_list!</span>(A, B, C, D, E, F);</code></pre></div>
+<p>Then use in queries:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span>ids = storage.query::&lt;(With&lt;(Position, Velocity)&gt;, Without&lt;Health&gt;)&gt;();</code></pre></div>
+<hr />
+<h3 id="-architecture"><a class="doc-anchor" href="#-architecture">§</a>🧱 Architecture</h3>
+<ul>
+<li>Each component type has a separate <code>Storage&lt;E, T&gt;</code></li>
+<li>All storages are type-erased into <code>dyn ComponentBucket&lt;E&gt;</code></li>
+<li>ECS queries are resolved using sets and intersections</li>
+<li>Entities can be any <code>Copy + Eq + Hash</code> type (e.g. <code>u32</code>)</li>
+</ul>
+<hr />
+<h3 id="-license"><a class="doc-anchor" href="#-license">§</a>🛠 License</h3>
+<p>Licensed under either of:</p>
+<ul>
+<li>MIT license <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a></li>
+<li>Apache License, Version 2.0 <a href="https://www.apache.org/licenses/LICENSE-2.0">https://www.apache.org/licenses/LICENSE-2.0</a></li>
+</ul>
+<hr />
+<h3 id="-created-by-buzzac"><a class="doc-anchor" href="#-created-by-buzzac">§</a>🦀 Created by Buzzac</h3>
+<p>For questions, ideas, or contributions, feel free to open an issue or PR.</p>
+<p>Want to regenerate this README from your docs?</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo install cargo-readme
+cargo readme &gt; README.md</code></pre></div></div></details><h2 id="macros" class="section-header">Macros<a href="#macros" class="anchor">§</a></h2><dl class="item-table"><dt><a class="macro" href="macro.component_list.html" title="macro simplecs::component_list">component_<wbr>list</a></dt></dl><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><dl class="item-table"><dt><a class="struct" href="struct.ComponentStorage.html" title="struct simplecs::ComponentStorage">Component<wbr>Storage</a></dt><dt><a class="struct" href="struct.ComponentStorageBuilder.html" title="struct simplecs::ComponentStorageBuilder">Component<wbr>Storage<wbr>Builder</a></dt><dt><a class="struct" href="struct.Storage.html" title="struct simplecs::Storage">Storage</a></dt><dt><a class="struct" href="struct.With.html" title="struct simplecs::With">With</a></dt><dt><a class="struct" href="struct.Without.html" title="struct simplecs::Without">Without</a></dt></dl><h2 id="traits" class="section-header">Traits<a href="#traits" class="anchor">§</a></h2><dl class="item-table"><dt><a class="trait" href="trait.Component.html" title="trait simplecs::Component">Component</a></dt><dt><a class="trait" href="trait.ComponentBucket.html" title="trait simplecs::ComponentBucket">Component<wbr>Bucket</a></dt><dt><a class="trait" href="trait.ComponentList.html" title="trait simplecs::ComponentList">Component<wbr>List</a></dt><dt><a class="trait" href="trait.Query.html" title="trait simplecs::Query">Query</a></dt></dl></section></div></main></body></html>
