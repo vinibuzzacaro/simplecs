@@ -6,9 +6,15 @@ version = 4
 name = "simplecs"
 version = "0.1.2"
 dependencies = [
- "simplecs_derive",
+ "simplecs_derive 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "simplecs_derive"
 version = "0.1.0"
+
+[[package]]
+name = "simplecs_derive"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa20dc7a0db76cd20db4728def14a05b1cb070e2c879692316e59e30d18e84b6"
