@@ -1,9 +1,0 @@
-[package]
-name = "simplecs"
-version = "0.1.0"
-edition = "2024"
-author = "Buzzac"
-license = "MIT OR Apache-2.0"
-description = "A simple entity-component system, focusing on simplicity and ergonomics."
-
-[dependencies]

@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"macro":["component_list"],"struct":["ComponentStorage","ComponentStorageBuilder","Storage","With","Without"],"trait":["Component","ComponentBucket","ComponentList","Query"]};
