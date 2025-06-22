@@ -1,6 +1,6 @@
 use std::{any::{Any, TypeId}, collections::{HashMap, HashSet}, hash::Hash};
 
-use crate::{components::{Component, ComponentBucket}, query::Query};
+use crate::{component_list, components::{Component, ComponentBucket}, query::Query};
 
 pub struct Storage<E: 'static + PartialEq + Eq + Hash, T: Component> {
     entities: Vec<E>,
@@ -61,6 +61,7 @@ impl<E: PartialEq + Eq + Hash, T: Component> Storage<E, T> {
 
 impl<E: PartialEq + 'static + Hash + Eq + Copy> ComponentStorage<E> {
     pub fn new() -> Self {
+        component_list!(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11);
         Self { storages: HashMap::new() }
     }
 
@@ -91,9 +92,13 @@ impl<E: PartialEq + 'static + Hash + Eq + Copy> ComponentStorage<E> {
     }
 
     pub fn add_component<T: Component>(&mut self, entity: E, component: T) {
-        if let Some(storage)= self.get_storage_mut::<T>() {
-            storage.add_component(entity, component);
-        }
+        let storage = self.storages
+            .entry(TypeId::of::<T>())
+            .or_insert_with(|| Box::new(Storage::<E, T>::default()))
+            .as_any_mut()
+            .downcast_mut::<Storage<E, T>>()
+            .expect("Failed to get/create storage for the component!");
+        storage.add_component(entity, component);
     }
 
     pub fn remove_component<T: Component>(&mut self, entity: &E) {
