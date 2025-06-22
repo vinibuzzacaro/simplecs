@@ -114,4 +114,4 @@ mod query;
 pub use crate::components::{Component, ComponentBucket, ComponentList};
 pub use crate::query::{Query, With, Without};
 pub use crate::storage::{ComponentStorage, Storage};
-pub use derive_lib::Component;
+pub use simplecs_derive::Component;

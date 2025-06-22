@@ -3,12 +3,12 @@
 version = 4
 
 [[package]]
-name = "derive_lib"
-version = "0.1.0"
+name = "simplecs"
+version = "0.1.2"
+dependencies = [
+ "simplecs_derive",
+]
 
 [[package]]
-name = "simplecs"
-version = "0.1.1"
-dependencies = [
- "derive_lib",
-]
+name = "simplecs_derive"
+version = "0.1.0"

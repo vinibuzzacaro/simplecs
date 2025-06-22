@@ -8,5 +8,5 @@ description = "A simple entity-component system, focusing on simplicity and ergo
 readme="README.md"
 publish = true
 
-[dependencies]
-simplecs_derive = "0.1" 
+[dependencies] 
+simplecs_derive = { path = "../derive_lib", version = "0.1" }
