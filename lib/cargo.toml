@@ -6,6 +6,7 @@ author = "Buzzac"
 license = "MIT OR Apache-2.0"
 description = "A simple entity-component system, focusing on simplicity and ergonomics."
 readme="README.md"
+publish = true
 
 [dependencies]
-derive_lib = { path = "../derive_lib" }
+simplecs_derive = "0.1" 
